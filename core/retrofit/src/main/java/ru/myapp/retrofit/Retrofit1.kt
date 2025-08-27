@@ -1,6 +1,6 @@
 package ru.myapp.retrofit
 
-object Retrofit1 {
+class Retrofit1 {
     fun getResponse(): String {
         return "First request"
     }
