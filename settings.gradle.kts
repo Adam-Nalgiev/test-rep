@@ -21,5 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
-include(":core:retrofit")
-include(":feature:home")
