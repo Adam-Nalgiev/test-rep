@@ -15,5 +15,8 @@ data class BouquetDbo(
     val name: String,
 
     @ColumnInfo(name = "is_available")
-    val isAvailable: Boolean = true
+    val isAvailable: Boolean = true,
+
+    @ColumnInfo(name = "decor")
+    val decor: String
 )

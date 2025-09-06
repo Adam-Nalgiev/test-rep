@@ -19,7 +19,7 @@ import ru.myapp.myapplication.database.dbo.InventoryDbo
         FlowerBouquetDbo::class,
         InventoryDbo::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = true
 )
 abstract class FlowersDatabase : RoomDatabase() {
@@ -27,11 +27,13 @@ abstract class FlowersDatabase : RoomDatabase() {
     abstract fun flowerDao(): FlowerDao
 
     companion object {
+        @Volatile
         private var instance: FlowersDatabase? = null
 
         val MIGRATION_1_2 = object : Migration(1, 2){
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE carnation ADD COLUMN country TEXT NOT NULL DEFAULT 'Holland'")
+                db.execSQL("ALTER TABLE flower ADD COLUMN country TEXT NOT NULL DEFAULT 'Holland'")
+                db.execSQL("ALTER TABLE bouquet ADD COLUMN decor TEXT NOT NULL DEFAULT 'None'")
             }
         }
 

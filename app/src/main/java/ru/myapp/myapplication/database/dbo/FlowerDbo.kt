@@ -14,5 +14,8 @@ data class FlowerDbo(
     val name: String,
 
     @ColumnInfo(name = "color")
-    val color: String?
+    val color: String?,
+
+    @ColumnInfo(name = "country")
+    val country: String
 )
