@@ -5,12 +5,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import ru.myapp.myapplication.database.FlowersDatabase
 import ru.myapp.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var db: FlowersDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,8 +21,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        db = FlowersDatabase.getInstance(this)
 
     }
+}
 
+fun quickSort(arr: List<Int>): List<Int> {
+
+    val left = arr.filter { it.toString() }
 }
