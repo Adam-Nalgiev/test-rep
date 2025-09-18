@@ -16,6 +16,7 @@ data class EncodedResult(
 )
 
 class Compressor {
+
     private fun calculateFrequencies(text: String): Map<Char, Int> {
         return text.groupingBy { it }.eachCount()
     }

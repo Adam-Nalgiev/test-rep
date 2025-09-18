@@ -24,8 +24,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-
-fun quickSort(arr: List<Int>): List<Int> {
-
-    val left = arr.filter { it.toString() }
-}

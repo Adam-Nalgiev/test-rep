@@ -8,5 +8,5 @@ fun quickSorter(arr: List<Int>): List<Int> {
     val middle = arr.filter { it == pivot }
     val right = arr.filter { it > pivot }
 
-    return quickSort(left) + middle + quickSort(right)
+    return quickSorter(left) + middle + quickSorter(right)
 }
